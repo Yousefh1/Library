@@ -39,5 +39,7 @@ button {
 }
 
 #close_btn {
-
+    position: absolute;
+    right:    0;
+    bottom:   0;
 }
