@@ -17,6 +17,9 @@ p {
   flex-direction: column;
   align-items: center;
   margin-left: 20px;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
 }
 label {
     display: block;
