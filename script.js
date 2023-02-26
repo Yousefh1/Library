@@ -21,7 +21,7 @@ const bookTemplate = (title, author, pages) => {
   const html = `
   <li class='book-item'> ${title} ${author} ${pages}</li>
 `
-bookList.innerHTML += html
+//bookList.innerHTML += html
 }
 popForm.addEventListener("submit", (e) => {
   e.preventDefault();
