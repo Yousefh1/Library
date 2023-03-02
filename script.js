@@ -50,8 +50,14 @@ function addToLibrary() {
 
 
 let myLibrary = [
-  
+  {
+  title: "Pachinko",
+  author: " Min Jin Lee",
+  pages: "490",
+  }
 ];
 submitButton.addEventListener("click", () => {
   popContainer.style.display = 'none'
-} )
+} ) 
+const bookToChange = myLibrary.find(book => book.title == title);
+bookToChange['read'] = !bookToChange['read'];
