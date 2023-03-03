@@ -10,14 +10,9 @@
 <body>
 <h1>Library</h1>
 <p> This is a place where you can save your books</p>
-
-<div id="popup-form-container" hidden>
-  <div id="checkbox">
-      <p><label>Read:</label><input type="checkbox" id="read" name="read" value="yes"></p>
-    </div>
-    <form id="popup-form">
+ <button id="open_form">Add the Book here</button> 
+    <form id="popup-form" class="form" style="display: none">
       <h1>add here</h1>
-
       <label for="title">Title</label>
       <input type="text" id="title" name="title" required>
       <label for="Author">Author:</label>
@@ -26,15 +21,10 @@
       <input type="number" name="Pages" id="pages" required>
       <button type="submit" class="form_summit_btn" id="submit-btn">Submit</button>
       <button id="cancel-form">Cancel</button>
-      
+      <p><label>Read:</label><input type="checkbox" id="read" name="read" ></p>
     </form>
-  </div>
-    <button id="close_btn">Add the Book here</button>
-     <ul id='book-list' >
-  <li class='book-item'></li>
-  <li class='book-item'></li>
-  <li class='book-item'></li>
-</ul>
+
+   
     <div id="library-container"></div>
 
 <script src="script.js"></script>

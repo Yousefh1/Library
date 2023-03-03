@@ -1,5 +1,6 @@
 body {
     background-color: brown;
+    text-align: center;
 }
 
 h1 {
@@ -41,7 +42,7 @@ button {
     cursor: pointer;
 }
 
-#close_btn {
+#open_form {
     position: absolute;
     right:    0;
     bottom:   0;
@@ -67,4 +68,9 @@ th {
 button {
     color: #272822;
     background-color:bisque
+}
+
+.form{
+   /* background-color: blue; */
+   display: flex;
 }
