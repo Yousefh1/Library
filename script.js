@@ -1,7 +1,7 @@
 // const popContainer = document.getElementById("popup-form-container");
 // const popForm = document.getElementById("popup-form");
 // const addButton = document.getElementById("close_btn");
-// const cancelButton = document.getElementById("cancel-form");
+const cancelButton = document.getElementById("cancel-form");
 // const bookList = document.getElementById("book-list");
 // const submitButton = document.getElementById("submit-btn");
 // popContainer.addEventListener("click", () =>
@@ -72,12 +72,22 @@ function Book(title,author,pages,read) {
   this.title = title;
   this.read = read;
 };
+
+Book.prototype.toggleRead = function() {
+  this.read = !this.read;
+}
+
+function toggleRead(index) {
+  library[index].toggleRead();
+  render();
+}
 function render() {
   let libraryEl = document.querySelector("#library-container");
    libraryEl.innerHTML = "";
 for (let i = 0; i < library.length; i++) {
   let book = library[i];
   let bookel = document.createElement("div");
+  bookel.setAttribute("class", "book-card")
   bookel.innerHTML = `<div class="card-header">
   <h3 class="author"> by ${book.author};
   <h3 class="title"> by ${book.title}</h3>
@@ -85,7 +95,11 @@ for (let i = 0; i < library.length; i++) {
   <div class="card-body">
   <p> ${book.pages} pages </p>
   <p class="read-status">${book.read ? "Read" : "Note Read Yet"}</p>
-  </div>;`
+  <button class="remove-btn" onclick="removeBook(${i})">Remove</button>
+  <button class="toggle-read-btn" onclick="toggleRead(${i})">Toggle Read</button>
+  </div>;
+  
+  `
 
   libraryEl.appendChild(bookel);
 }
@@ -109,3 +123,7 @@ newBookbtn.addEventListener("click", function() {
   event.preventDefault();
   addBookToLibrary();
  })
+ function removeBook(index) {
+  library.splice(index,1)
+  render(); 
+ }

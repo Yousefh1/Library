@@ -70,7 +70,10 @@ button {
     background-color:bisque
 }
 
-.form{
-   /* background-color: blue; */
-   display: flex;
+#library-container {
+    display: flex;
+    flex-direction: column;
+}
+#popup-form {
+    flex-direction: column;
 }
