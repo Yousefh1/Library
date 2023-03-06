@@ -89,15 +89,15 @@ for (let i = 0; i < library.length; i++) {
   let bookel = document.createElement("div");
   bookel.setAttribute("class", "book-card")
   bookel.innerHTML = `<div class="card-header">
-  <h3 class="author"> by ${book.author};
+  <h3 class="author">  ${book.author};
   <h3 class="title"> by ${book.title}</h3>
-  </div>;
+  </div>
   <div class="card-body">
   <p> ${book.pages} pages </p>
   <p class="read-status">${book.read ? "Read" : "Note Read Yet"}</p>
   <button class="remove-btn" onclick="removeBook(${i})">Remove</button>
   <button class="toggle-read-btn" onclick="toggleRead(${i})">Toggle Read</button>
-  </div>;
+  </div>
   
   `
 
